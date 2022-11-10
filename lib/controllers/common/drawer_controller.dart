@@ -22,19 +22,7 @@ class MyDrawerController extends GetxController {
   }
 
   void github() {
-    _launch('https://github.com/CodeFoxLk');
-  }
-
-  void email() {
-    final Uri emailLaunchUri = Uri(
-      scheme: 'mailto',
-      path: 'codefoxlk@gmail.com',
-    );
-    _launch(emailLaunchUri.toString());
-  }
-
-  void downloadSourceCode() {
-    _launch('https://github.com/CodeFoxLk/quizzle_public.git');
+    _launch('https://github.com/anupupadhaya123/quizApp');
   }
 
   @override

@@ -2,9 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/bindings/initial_binding.dart';
 import 'package:quizzle/controllers/common/theme_controller.dart';
 import 'package:quizzle/routes/app_routes.dart';
+import 'bindings/initial_binding.dart';
 import 'firebase_options.dart';
 
 void main() async {

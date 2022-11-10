@@ -28,13 +28,12 @@ class AppIntroductionScreen extends StatelessWidget {
                 color: kOnSurfaceTextColor,
               ),
               const Text(
-                'This is not a production app. This quiz app is made for beginner flutter developers to understand the firebase integrations, state management, and the app flow. There are free available all source codes, design files also.',
+                'This is not a production app. This quiz app is made as college project.Therefore, There are free available all source codes, design files also in my github.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 18,
-                  color: kOnSurfaceTextColor,
-                  fontWeight: FontWeight.bold
-                ),
+                    fontSize: 18,
+                    color: kOnSurfaceTextColor,
+                    fontWeight: FontWeight.bold),
               ),
               CircularButton(
                   onTap: () => Get.offAndToNamed(HomeScreen.routeName),

@@ -16,7 +16,8 @@ class CustomDrawer extends GetView<MyDrawerController> {
       child: Theme(
         data: ThemeData(
             textButtonTheme: TextButtonThemeData(
-                style: TextButton.styleFrom(primary: kOnSurfaceTextColor))),
+                style: TextButton.styleFrom(
+                    foregroundColor: kOnSurfaceTextColor))),
         child: SafeArea(
             child: Stack(
           children: [
@@ -39,11 +40,11 @@ class CustomDrawer extends GetView<MyDrawerController> {
                       ? TextButton.icon(
                           icon: const Icon(Icons.login_rounded),
                           style: TextButton.styleFrom(
+                              foregroundColor: Colors.white,
                               padding: const EdgeInsets.symmetric(
                                   vertical: 10, horizontal: 15),
                               elevation: 0,
-                              backgroundColor: Colors.white.withOpacity(0.5),
-                              primary: Colors.white),
+                              backgroundColor: Colors.white.withOpacity(0.5)),
                           onPressed: () {
                             controller.signIn();
                           },
@@ -83,33 +84,6 @@ class CustomDrawer extends GetView<MyDrawerController> {
                       onPressed: () => controller.github(),
                       icon: AppIcons.github,
                       label: 'My GitHub'),
-                  _DrawerButton(
-                    icon: Icons.code,
-                    label: ' Download Source Code',
-                    onPressed: () => controller.downloadSourceCode(),
-                  ),
-                  _DrawerButton(
-                      icon: AppIcons.contact,
-                      label: 'Contact Me',
-                      onPressed: () {}),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 25),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        _DrawerButton(
-                            icon: AppIcons.web, label: 'Web', onPressed: () {}),
-                        _DrawerButton(
-                            icon: AppIcons.email,
-                            label: 'Email',
-                            onPressed:  () => controller.email()),
-                        // _DrawerButton(
-                        //     icon: AppIcons.github,
-                        //     label: 'GitHub',
-                        //     onPressed: () {}),
-                      ],
-                    ),
-                  ),
                   const Spacer(flex: 4),
                   _DrawerButton(
                     icon: AppIcons.logout,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:quizzle/configs/configs.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -13,7 +12,7 @@ class SplashScreen extends StatelessWidget {
       body: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(gradient: mainGradient(context)),
-        child: SvgPicture.asset('assets/images/app_splash_logo.svg'),
+        child: Image.asset('assets/icons/ic_launcher.png'),
       ),
     );
   }

@@ -17,6 +17,9 @@ class QuizPaperController extends GetxController {
   final allPapers = <QuizPaperModel>[].obs;
   final allPaperImages = <String>[].obs;
 
+
+  
+
   Future<void> getAllPapers() async {
     try {
       QuerySnapshot<Map<String, dynamic>> data = await quizePaperFR.get();
