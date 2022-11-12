@@ -51,10 +51,15 @@ class QuizeScreen extends GetView<QuizController> {
                           padding: const EdgeInsets.only(top: 20),
                           child: Column(
                             children: [
-                              Text(
-                                controller.currentQuestion.value!.question,
-                                style: kQuizeTS,
-                              ),
+                              controller.currentQuestion.value!.question
+                                      .contains('.png')
+                                  ? Image.network(controller
+                                      .currentQuestion.value!.question)
+                                  : Text(
+                                      controller
+                                          .currentQuestion.value!.question,
+                                      style: kQuizeTS,
+                                    ),
                               GetBuilder<QuizController>(
                                   id: 'answers_list',
                                   builder: (context) {
@@ -121,12 +126,18 @@ class QuizeScreen extends GetView<QuizController> {
                           Expanded(
                             child: Obx(
                               () => Visibility(
-                                visible: controller.loadingStatus.value == LoadingStatus.completed,
+                                visible: controller.loadingStatus.value ==
+                                    LoadingStatus.completed,
                                 child: MainButton(
                                   onTap: () {
-                                    controller.islastQuestion ?  Get.toNamed(QuizOverviewScreen.routeName) : controller.nextQuestion();
+                                    controller.islastQuestion
+                                        ? Get.toNamed(
+                                            QuizOverviewScreen.routeName)
+                                        : controller.nextQuestion();
                                   },
-                                  title: controller.islastQuestion ? 'Complete' : 'Next',
+                                  title: controller.islastQuestion
+                                      ? 'Complete'
+                                      : 'Next',
                                 ),
                               ),
                             ),

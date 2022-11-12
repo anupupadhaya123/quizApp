@@ -13,7 +13,7 @@ class AppRoutes {
           name: AppIntroductionScreen.routeName,
         ),
         GetPage(
-            page: () => const HomeScreen(),
+            page: () => HomeScreen(),
             name: HomeScreen.routeName,
             binding: BindingsBuilder(() {
               Get.put(QuizPaperController());

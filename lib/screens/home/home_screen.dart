@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
@@ -13,10 +12,11 @@ class HomeScreen extends GetView<MyDrawerController> {
   const HomeScreen({Key? key}) : super(key: key);
 
   static const String routeName = '/home';
-  
 
   @override
   Widget build(BuildContext context) {
+    const double _padding = 10.0;
+
     QuizPaperController _quizePprContoller = Get.find();
     return Scaffold(
         body: GetBuilder<MyDrawerController>(
@@ -90,21 +90,31 @@ class HomeScreen extends GetView<MyDrawerController> {
                           onRefresh: () async {
                             _quizePprContoller.getAllPapers();
                           },
-                          child: ListView.separated(
-                            padding: UIParameters.screenPadding,
-                            shrinkWrap: true,
-                            itemCount: _quizePprContoller.allPapers.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return QuizPaperCard(
-                                model: _quizePprContoller.allPapers[index],
-                              );
-                            },
-                            separatorBuilder:
-                                (BuildContext context, int index) {
-                              return const SizedBox(
-                                height: 20,
-                              );
-                            },
+                          child: SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                ListView.separated(
+                                  physics: const NeverScrollableScrollPhysics(),
+                                  padding: UIParameters.screenPadding,
+                                  shrinkWrap: true,
+                                  itemCount:
+                                      _quizePprContoller.allPapers.length,
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
+                                    return QuizPaperCard(
+                                      model:
+                                          _quizePprContoller.allPapers[index],
+                                    );
+                                  },
+                                  separatorBuilder:
+                                      (BuildContext context, int index) {
+                                    return const SizedBox(
+                                      height: 20,
+                                    );
+                                  },
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

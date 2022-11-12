@@ -23,7 +23,7 @@ class LoginScreen extends GetView<AuthController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset('assets/images/app_splash_logo.svg'),
+              Image.asset('assets/images/ic_launcher.png'),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 60),
                 child: Text(
@@ -36,7 +36,7 @@ class LoginScreen extends GetView<AuthController> {
               MainButton(
                 onTap: () {
                   controller.siginInWithGoogle();
-                 },
+                },
                 color: Colors.white,
                 child: Stack(
                   children: [
