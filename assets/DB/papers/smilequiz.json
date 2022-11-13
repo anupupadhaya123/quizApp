@@ -120,6 +120,30 @@
                 }
             ],
             "correct_answer": "D"
+        },
+
+        {
+            "id": "ppr005q006",
+            "question": "https://www.sanfoh.com/uob/smile/data/sd14a07d71fdb218d53e5d74304n153.png",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "1"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "2"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "4"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "3"
+                }
+            ],
+            "correct_answer": "D"
         }
     ]
 }

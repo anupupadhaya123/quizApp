@@ -22,7 +22,7 @@ class HomeScreen extends GetView<MyDrawerController> {
         body: GetBuilder<MyDrawerController>(
       builder: (_) => ZoomDrawer(
         controller: _.zoomDrawerController,
-        borderRadius: 50.0,
+        borderRadius: 10.0,
         showShadow: true,
         angle: 0.0,
         style: DrawerStyle.DefaultStyle,
